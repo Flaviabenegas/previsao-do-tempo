@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
+  },
+  "name": "previsao-do-tempo",
+  "version": "1.0.0",
+  "description": "api simples de previsao do tempo",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "previsao",
+    "tempo",
+    "axios",
+    "express"
+  ],
+  "author": "Flavia Benegas",
+  "license": "ISC"
+}
