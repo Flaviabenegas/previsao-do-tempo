@@ -1,15 +1,17 @@
 require('dotenv').config()
 const express = require('express')
 const axios = require('axios')
+const cors = require('cors')
 const app = express()
 const PORT = process.env.PORT || 3000
 
+app.use(cors())
 
 app.get('/previsao/:cidade', async (req, res) => {
     try {
         const cidade = req.params.cidade;
         const API_key = process.env.API_key
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API_key}&units=metric&lang=pt_br`
+        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cidade}&appid=${API_key}`
         const respostaDaApi = await axios.get(apiUrl);
 
         res.json(respostaDaApi.data)
